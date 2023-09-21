@@ -1,0 +1,215 @@
+@keyframes flash {
+
+    25%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    50%,
+    75% {
+        opacity: 0.75;
+    }
+}
+
+/* General styles */
+.slot-machine-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slot-machine {
+    display: flex;
+    flex-direction: column;
+}
+
+.slot-row {
+    display: flex;
+}
+
+.box {
+    flex: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+    /* Adjust the font size to make symbols bigger */
+    margin-top: -12%;
+    margin-bottom: 12%;
+    margin-left: -31%;
+    margin-right: 48%;
+    border: none;
+}
+
+
+.good-luck-text {
+    font-size: 65px;
+    font-family: Luminari, fantasy;
+    position: absolute;
+    top: 550px;
+    /* Adjust the top margin in pixels to position the text */
+    left: 50%;
+    transform: translateX(-50%);
+    color: gold;
+}
+
+.win-message-text {
+    font-size: 65px;
+    font-family: Luminari, fantasy;
+    position: absolute;
+    top: 550px;
+    /* Adjust the top margin in pixels to position the text */
+    left: 50%;
+    transform: translateX(-50%);
+    color: gold;
+}
+
+.coin-text {
+    font-size: 65px;
+    font-family: Luminari, fantasy;
+    position: absolute;
+    top: 100px;
+    /* Adjust the top margin in pixels to position the text */
+    left: 60%;
+    transform: translateX(-50%);
+    color: black;
+}
+
+/* Style for the button */
+.button {
+    background-color: #0b616e;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 35px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: none;
+    border-radius: 18px;
+    font-family: Luminari, fantasy;
+}
+
+/* Add hover effect */
+.button:hover {
+    background-color: #0b617e;
+}
+
+/* Positioning */
+.button-container {
+    position: absolute;
+    top: 650px;
+    /* Adjust the top position in pixels */
+    left: 65%;
+    /* Adjust the left position in pixels */
+    transform: translateX(-50%);
+}
+
+.button:not([disabled]) {
+    animation: flash 3s infinite;
+    /* Apply the flash animation */
+}
+
+.winning-symbol {
+    background-color: rgb(13, 255, 0);
+    /* or any other color you want to use to highlight */
+    /* Add any other styles to highlight the winning symbols */
+}
+
+.total-coins {
+    font-size: 35px;
+    font-family: Luminari, fantasy;
+    position: absolute;
+    top: 30px;
+    left: 92%;
+    transform: translateX(-50%);
+    color: black;
+}
+
+.denomination10-buttons {
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 18px;
+    font-family: Luminari, fantasy;
+    position: absolute;
+    top: 645px;
+    /* Adjust the distance from the top */
+    left: 29%;
+    /* Adjust the distance from the left */
+    transform: translateX(-50%);
+    background-color: #0b616e;
+}
+
+.denomination20-buttons {
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 18px;
+    font-family: Luminari, fantasy;
+    position: absolute;
+    top: 645px;
+    /* Adjust the distance from the top */
+    left: 36%;
+    /* Adjust the distance from the left */
+    transform: translateX(-50%);
+    background-color: #0b616e;
+}
+
+.denomination50-buttons {
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 18px;
+    font-family: Luminari, fantasy;
+    position: absolute;
+    top: 645px;
+    /* Adjust the distance from the top */
+    left: 43%;
+    /* Adjust the distance from the left */
+    transform: translateX(-50%);
+    background-color: #0b616e;
+}
+
+.denomination-buttons .selected {
+    background-color: red;
+}
+
+/* Add this CSS for rotation */
+.coin-rotation img {
+    animation: rotate 2s infinite linear;
+    /* Adjust animation duration and timing function as needed */
+    width: 40px;
+    /* Adjust the width to the desired size */
+    height: 40px;
+    /* Adjust the height to the desired size */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+        /* Rotate around the vertical axis */
+    }
+
+    to {
+        transform: rotateY(360deg);
+        /* Rotate around the vertical axis */
+    }
+}
